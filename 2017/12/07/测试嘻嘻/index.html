@@ -30,6 +30,10 @@
 <meta name="twitter:description" content="这是我的第一篇博客，心情激动地来测试~">
     
     
+      <link rel="alternate" href="/atom.xml" title="Echoleee" type="application/atom+xml">
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
     
     <link rel="stylesheet" href="/css/uno.css">
     <link rel="stylesheet" href="/css/highlight.css">
@@ -67,6 +71,15 @@
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
 
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
               
 
             </ul>
@@ -146,7 +159,7 @@ classes that you can use:
     
       <!-- Github -->
       <li class="navigation__item">
-        <a href="https://www.instagram.com/echoleee_/" title="Huno on GitHub">
+        <a href="https://www.instagram.com/echoleee_/" title="Huno on Instagram">
           <i class='icon icon-social-instagram'></i>
           <span class="label">Instagram</span>
         </a>
@@ -165,7 +178,7 @@ classes that you can use:
     
       <!-- Github -->
       <li class="navigation__item">
-        <a href="https://m.weibo.cn/u/2560537340/?jumpfrom=weibocom&from=singlemessage" title="">
+        <a href="https://m.weibo.cn/u/2560537340/?jumpfrom=weibocom&from=singlemessage" title="Huno on Weibo">
           <i class='icon cs-icon-weibo'></i>
           <span class="label">Weibo</span>
         </a>
@@ -174,6 +187,7 @@ classes that you can use:
 	
   </ul>
 </nav>
+
 
 
 
@@ -288,9 +302,36 @@ var _hmt = _hmt || [];
     
 
     
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
     
     
-    
+
+    <script src="/js/jquery.githubRepoWidget.min.js"></script>
+
+
     <!--kill ie6 -->
 <!--[if IE 6]>
   <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
