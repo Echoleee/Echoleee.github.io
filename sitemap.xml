@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>git@github.com:Echoleee/Echoleee.github.io.git/guestbook/index.html</loc>
+    
+    <lastmod>2017-12-12T07:05:08.012Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>git@github.com:Echoleee/Echoleee.github.io.git/tag/index.html</loc>
     
     <lastmod>2017-12-12T04:56:36.350Z</lastmod>
