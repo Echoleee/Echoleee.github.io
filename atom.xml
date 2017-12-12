@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Echoleee&#39;s blog</title>
+  <title>Echoleee</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -35,22 +35,20 @@
     <link href="git@github.com:Echoleee/Echoleee.github.io.git/2017/12/07/%E6%B5%8B%E8%AF%95%E5%98%BB%E5%98%BB/"/>
     <id>git@github.com:Echoleee/Echoleee.github.io.git/2017/12/07/测试嘻嘻/</id>
     <published>2017-12-07T11:26:39.000Z</published>
-    <updated>2017-12-11T15:59:47.781Z</updated>
+    <updated>2017-12-12T08:41:02.152Z</updated>
     
     <content type="html"><![CDATA[<p>这是我的第一篇博客，心情激动地来测试~</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;这是我的第一篇博客，心情激动地来测试~&lt;/p&gt;
-
-      
+      text for encryption
     
     </summary>
     
     
-      <category term="测试" scheme="git@github.com:Echoleee/Echoleee.github.io.git/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="text" scheme="git@github.com:Echoleee/Echoleee.github.io.git/tags/text/"/>
+    
+      <category term="encrypted" scheme="git@github.com:Echoleee/Echoleee.github.io.git/tags/encrypted/"/>
     
   </entry>
   

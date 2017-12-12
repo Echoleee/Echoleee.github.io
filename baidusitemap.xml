@@ -3,17 +3,17 @@
 
 
     
-    
-    
   <url>
     <loc>git@github.com:Echoleee/Echoleee.github.io.git/2017/12/07/%E6%B5%8B%E8%AF%95%E5%98%BB%E5%98%BB/</loc>
-    <lastmod>2017-12-11T15:59:47.781Z</lastmod>
+    <lastmod>2017-12-12T08:41:02.152Z</lastmod>
     <data>
         <display>
         <title>这是一篇测试 嘻嘻</title>
         <pubTime>2017-12-07T11:26:39.000Z</pubTime>
         
-        <tag>测试</tag>
+        <tag>text</tag>
+         
+        <tag>encrypted</tag>
          
          
            
@@ -21,6 +21,10 @@
     </data>
     </url>
 
+    
+    
+    
+    
     
   <url>
     <loc>git@github.com:Echoleee/Echoleee.github.io.git/2017/12/03/hello-world/</loc>
@@ -36,7 +40,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>git@github.com:Echoleee/Echoleee.github.io.git/2017/12/09/pagearchive/</loc>
