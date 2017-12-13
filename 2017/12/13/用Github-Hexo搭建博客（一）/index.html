@@ -125,7 +125,7 @@
 <meta property="og:image" content="https://i.imgur.com/Ylytker.png">
 <meta property="og:image" content="https://i.imgur.com/ZxrxHwl.png">
 <meta property="og:image" content="https://i.imgur.com/qtd5lei.png">
-<meta property="og:updated_time" content="2017-12-13T10:46:04.813Z">
+<meta property="og:updated_time" content="2017-12-13T10:52:13.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Github+Hexo搭建博客（一）">
 <meta name="twitter:description" content="搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。第一部分：Hexo和Github的初始搭建">
@@ -488,13 +488,14 @@
 <blockquote>
 <p>官网上的解决办法：<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
 </blockquote>
-<p>但是我在运行命令时会有如下提示：<br><img src="https://i.imgur.com/qUnRW1O.png" alt=""><br>按照提示user.name和user.email也无解orz<br>不知道你们可不可以诶<br>反正后来我就没有试下去了qwq</p>
+<p>但是我在运行命令时会有如下提示：<br><img src="https://i.imgur.com/qUnRW1O.png" alt=""><br>按照提示输入user.name和user.email也无解orz<br>不知道你们可不可以诶<br>反正后来我就没有试下去了qwq</p>
 <hr>
 <h2 id="配置-SSH-Key"><a href="#配置-SSH-Key" class="headerlink" title="配置 SSH Key"></a>配置 SSH Key</h2><p><strong>贴一段解释：</strong><br>加密传输的算法有好多，git使用rsa，rsa要解决的一个核心问题是，如何使用一对特定的数字，使其中一个数字可以用来加密，而另外一个数字可以用来解密。这两个数字就是你在使用git和github的时候所遇到的public key也就是公钥以及private key私钥。<br>其中，公钥就是那个用来加密的数字，这也就是为什么你在本机生成了公钥之后，要上传到github的原因。从github发回来的，用那公钥加密过的数据，可以用你本地的私钥来还原。<br>如果你的key丢失了，不管是公钥还是私钥，丢失一个都不能用了，解决方法也很简单，重新再生成一次，然后在github.com里再设置一次就行。</p>
 <blockquote>
 <p>摘录自：<a href="http://blog.csdn.net/male09/article/details/72627815?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">10分钟教你把项目保存到github仓库保管代码</a></p>
 </blockquote>
-<p>这个环节，选做吧~<br>不配置 SSH Key 的话，以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要再输入账号密码啦！<br><strong>配置过程</strong><br>打开Git Bash<br><strong>1.检测是否存在SSH Key</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.ssh</span></span><br></pre></td></tr></table></figure></p>
+<p>这个环节，选做吧~<br>不配置 SSH Key 的话，以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要再输入账号密码啦！ </p>
+<p><strong>配置过程</strong><br>打开Git Bash<br><strong>1.检测是否存在SSH Key</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.ssh</span></span><br></pre></td></tr></table></figure></p>
 <p>或者你直接手动打开文件资源管理器查看，一般路径是C:\Users\“用户名”，有一个文件夹名为.ssh，有的话就是原来就已经存在SSH Key啦。<br><strong>2.用<code>ssh-keygen</code>来生成SSH Key</strong><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C<span class="string">"邮箱"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.name<span class="string">"用户名"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email<span class="string">"邮箱"</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="https://i.imgur.com/Gj5Ga6X.jpg" alt=""><br>依照上面显示的路径打开.ssh文件夹：<br><img src="https://i.imgur.com/EaWboeo.png" alt=""><br>打开 Pub 文件，复制全文<br><strong>3.设置 Github 项目的 Deploy keys</strong><br>打开 Github，在 Settings 里面找到 Deploy keys：<br><img src="https://i.imgur.com/6XmTBKu.png" alt=""><br>把复制的Pub文件内容粘贴在“Key”里面；<br>Title可以自己命名（可以和repo配套，就比较好区分）;<br><strong>注意要勾选“Allow write access”，这张截图是一开始没有勾选的时候，后来不知道花了多少时间才找到一直报错的原因 QAQ</strong><br><img src="https://i.imgur.com/W0gPK3m.jpg" alt=""><br>输入密码 to confirm：<br><img src="https://i.imgur.com/0WwKhUj.png" alt=""><br><strong>4.确认SSH Key 有效</strong><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure></p>
 <p>前面的warning都可以不必理会，最后看见一下提示就OK：</p>
