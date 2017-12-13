@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+<script>
+    (function(){
+        if(''){
+            if (prompt('输入访问密码呀') !== ''){
+                alert('密码错误嗷');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="BLOG教程," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Echoleee" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。第一部分：Hexo和Github的初始搭建">
+<meta name="keywords" content="BLOG教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用Github+Hexo搭建博客（一）">
+<meta property="og:url" content="git@github.com:Echoleee/Echoleee.github.io.git/2017/12/13/用Github-Hexo搭建博客（一）/index.html">
+<meta property="og:site_name" content="Echoleee">
+<meta property="og:description" content="搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。第一部分：Hexo和Github的初始搭建">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/JnfcpPm.png">
+<meta property="og:image" content="https://i.imgur.com/0AJKg0U.png">
+<meta property="og:image" content="https://i.imgur.com/qoLu7fD.png">
+<meta property="og:image" content="https://i.imgur.com/Ds1evVN.png">
+<meta property="og:image" content="https://i.imgur.com/C4jJYgw.png">
+<meta property="og:image" content="https://i.imgur.com/z5cc2wU.png">
+<meta property="og:image" content="https://i.imgur.com/oqURFnS.png">
+<meta property="og:image" content="https://i.imgur.com/XHIbvXd.png">
+<meta property="og:image" content="https://i.imgur.com/We72KFa.png">
+<meta property="og:image" content="https://i.imgur.com/RsrIrXO.png">
+<meta property="og:image" content="https://i.imgur.com/JrjKoaG.png">
+<meta property="og:image" content="https://i.imgur.com/qUnRW1O.png">
+<meta property="og:image" content="https://i.imgur.com/Gj5Ga6X.jpg">
+<meta property="og:image" content="https://i.imgur.com/EaWboeo.png">
+<meta property="og:image" content="https://i.imgur.com/6XmTBKu.png">
+<meta property="og:image" content="https://i.imgur.com/W0gPK3m.jpg">
+<meta property="og:image" content="https://i.imgur.com/0WwKhUj.png">
+<meta property="og:image" content="https://i.imgur.com/BSd2XT6.png">
+<meta property="og:image" content="https://i.imgur.com/POWt03V.png">
+<meta property="og:image" content="https://i.imgur.com/azlcTp9.png">
+<meta property="og:image" content="https://i.imgur.com/jyipIsn.png">
+<meta property="og:image" content="https://i.imgur.com/RpxZOFt.png">
+<meta property="og:image" content="https://i.imgur.com/QQsnyte.png">
+<meta property="og:image" content="https://i.imgur.com/Ylytker.png">
+<meta property="og:image" content="https://i.imgur.com/ZxrxHwl.png">
+<meta property="og:image" content="https://i.imgur.com/qtd5lei.png">
+<meta property="og:updated_time" content="2017-12-13T08:54:58.876Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="用Github+Hexo搭建博客（一）">
+<meta name="twitter:description" content="搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。第一部分：Hexo和Github的初始搭建">
+<meta name="twitter:image" content="https://i.imgur.com/JnfcpPm.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.3',
+    sidebar: {"position":"left","Sidebar Display, available value (only for Muse | Mist)":["always  expand for all pages automatically"],"display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'LCWADML140',
+      apiKey: 'e32348cb97f3e70052a394f409e8336d',
+      indexName: 'Echoleee',
+      hits: {"per_page":7},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="git@github.com:Echoleee/Echoleee.github.io.git/2017/12/13/用Github-Hexo搭建博客（一）/"/>
+
+
+
+
+
+  <title>用Github+Hexo搭建博客（一） | Echoleee</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?207fc8fd045656a9247591a95bded06b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Echoleee</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
+            
+            留言本
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="git@github.com:Echoleee/Echoleee.github.io.git/2017/12/13/用Github-Hexo搭建博客（一）/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="柳蕊">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar-01.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Echoleee">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">用Github+Hexo搭建博客（一）</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T00:56:44+08:00">
+                2017-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BLOG教程/" itemprop="url" rel="index">
+                    <span itemprop="name">BLOG教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。<br><br><strong>第一部分：Hexo和Github的初始搭建</strong></p>
+<a id="more"></a>
+<p>我的系统 windows10；<br>所有用户名统一是Echoleee；<br>接下来我们一步一步一步一步来 orz</p>
+<h2 id="安装-Node"><a href="#安装-Node" class="headerlink" title="安装 Node"></a>安装 Node</h2><blockquote>
+<p>作用：用来生成静态页面<br>官网下载链接：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></p>
+</blockquote>
+<p>检验安装完成：<br>Win + R ；打开cmd；查询node版本号：<br><img src="https://i.imgur.com/JnfcpPm.png" alt=""></p>
+<hr>
+<h2 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h2><blockquote>
+<p>作用：把本地的Hexo内容提交到Github<br>官网下载链接：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git-Downloads</a></p>
+</blockquote>
+<p>检验安装完成：<br>Win + R ；打开cmd；查询git版本号：<br><img src="https://i.imgur.com/0AJKg0U.png" alt=""></p>
+<hr>
+<h2 id="注册-Github账号"><a href="#注册-Github账号" class="headerlink" title="注册 Github账号"></a>注册 Github账号</h2><blockquote>
+<p>官网链接：<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></p>
+</blockquote>
+<ul>
+<li><strong>注册完记得登录邮箱确认呀！！</strong></li>
+</ul>
+<p><img src="https://i.imgur.com/qoLu7fD.png" alt=""></p>
+<hr>
+<h2 id="配置-Github账号"><a href="#配置-Github账号" class="headerlink" title="配置 Github账号"></a>配置 Github账号</h2><p>注册好了之后来到以下页面，选择New repository 创建代码库：<br><img src="https://i.imgur.com/Ds1evVN.png" alt=""><br>Repository name 就写“代码库名字.github.io“；例如我创建了一个名为Echoleee的代码库：</p>
+<ul>
+<li><strong>代码库的名字一定要和你的Github用户名一样！！</strong></li>
+</ul>
+<p><img src="https://i.imgur.com/C4jJYgw.png" alt=""><br>创建后的页面如下：<br><img src="https://i.imgur.com/z5cc2wU.png" alt=""></p>
+<hr>
+<h2 id="建立-gh-page-分支"><a href="#建立-gh-page-分支" class="headerlink" title="建立 gh-page 分支"></a>建立 gh-page 分支</h2><blockquote>
+<p>Github 项目的静态页面解析需要用到gh-page分支；<br>Gh-page 建立成功后Echoleee.github.io 这个网址就可以访问啦~</p>
+</blockquote>
+<p>选择 Settings：<br><img src="https://i.imgur.com/oqURFnS.png" alt=""><br>下拉找到 GitHub Pages ；<br>如果直接看到“Launch automatic page generator“就直接点，Github会直接创建出一个gh-pages的页面，等一会会，就可以访问Echoleee.github.io这个网址啦！<br><strong>然而 qwq</strong><br>如果是这样的：<br>（Github页面的发布源设置为None）<br><img src="https://i.imgur.com/XHIbvXd.png" alt=""><br>把 None 改成 Master 分支就好…<br><strong>然然而 qwq</strong><br>这一步我点开None，不能改成master分支。我尝试了两个方法，目测应该是方法一最终解决；方法二是官网提供的解决方法，然而我最后没有弄明白诶。</p>
+<ul>
+<li>方法一：</li>
+</ul>
+<blockquote>
+<p>直接点选 Github Pages 下面的 Theme Chooser ，暂时先随意挑选一个主题，Github自带的主题并不好看，不过没四因为我们接下来会重新换主题的啦~</p>
+</blockquote>
+<p><img src="https://i.imgur.com/We72KFa.png" alt=""><br>Select a theme，然后一路确定下来（sorry忘记截图，但是这部分应该没有难度啦~），你惊喜地发现挑了主题之后，原来没有显示master分支也有了，这时候你的主页也有啦！<br>这时候你回到gh-pages：<br><img src="https://i.imgur.com/RsrIrXO.png" alt=""></p>
+<blockquote>
+<p>“Your site is ready to be published at <strong><a href="https://echoleee.github.io/" target="_blank" rel="noopener">https://echoleee.github.io/</a></strong>.”</p>
+</blockquote>
+<p>打开网址，获得你独立域名的初始博客。<br><img src="https://i.imgur.com/JrjKoaG.png" alt=""></p>
+<ul>
+<li>方法二：</li>
+</ul>
+<blockquote>
+<p>官网上的解决办法：<a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+</blockquote>
+<p>但是我在运行命令时会有如下提示：<br><img src="https://i.imgur.com/qUnRW1O.png" alt=""><br>按照提示user.name和user.email也无解orz<br><br>不知道你们可不可以诶<br>反正后来我就没有试下去了qwq</p>
+<hr>
+<h2 id="配置-SSH-Key"><a href="#配置-SSH-Key" class="headerlink" title="配置 SSH Key"></a>配置 SSH Key</h2><ul>
+<li>贴一段解释：<blockquote>
+<p>加密传输的算法有好多，git使用rsa，rsa要解决的一个核心问题是，如何使用一对特定的数字，使其中一个数字可以用来加密，而另外一个数字可以用来解密。这两个数字就是你在使用git和github的时候所遇到的public key也就是公钥以及private key私钥。<br>其中，公钥就是那个用来加密的数字，这也就是为什么你在本机生成了公钥之后，要上传到github的原因。从github发回来的，用那公钥加密过的数据，可以用你本地的私钥来还原。<br>如果你的key丢失了，不管是公钥还是私钥，丢失一个都不能用了，解决方法也很简单，重新再生成一次，然后在github.com里再设置一次就行。<br>摘录自：<a href="http://blog.csdn.net/male09/article/details/72627815?utm_source=itdadao&amp;utm_medium=referral" target="_blank" rel="noopener">10分钟教你把项目保存到github仓库保管代码</a></p>
+</blockquote>
+</li>
+</ul>
+<p>这个环节，选做吧~<br>不配置 SSH Key 的话，以后每次对自己的博客有改动提交的时候就要手动输入账号密码，配置了就不需要再输入账号密码啦！ </p>
+<h4 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h4><p>打开Git Bash<br><strong>1.检测是否存在SSH Key</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> ~/.ssh</span></span><br></pre></td></tr></table></figure></p>
+<p>或者你直接手动打开文件资源管理器查看，一般路径是C:\Users\“用户名”，有一个文件夹名为.ssh，有的话就是原来就已经存在SSH Key啦。<br><strong>2.用<code>ssh-keygen</code>来生成SSH Key</strong><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C<span class="string">"邮箱"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.name<span class="string">"用户名"</span></span><br><span class="line">$ git<span class="built_in"> config </span>--global user.email<span class="string">"邮箱"</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/Gj5Ga6X.jpg" alt=""><br>依照上面显示的路径打开.ssh文件夹：<br><img src="https://i.imgur.com/EaWboeo.png" alt=""><br>打开 Pub 文件，复制全文<br><strong>3.设置 Github 项目的 Deploy keys</strong><br>打开 Github，在 Settings 里面找到 Deploy keys：<br><img src="https://i.imgur.com/6XmTBKu.png" alt=""><br>把复制的Pub文件内容粘贴在“Key”里面；<br>Title可以自己命名（可以和repo配套，就比较好区分）;</p>
+<ul>
+<li><strong>注意要勾选“Allow write access”，这张截图是一开始没有勾选的时候，后来不知道花了多少时间才找到一直报错的原因 QAQ</strong></li>
+</ul>
+<p><img src="https://i.imgur.com/W0gPK3m.jpg" alt=""><br>输入密码 to confirm：<br><img src="https://i.imgur.com/0WwKhUj.png" alt=""><br><strong>4.确认SSH Key 有效</strong><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ssh -T git<span class="variable">@github</span>.com</span><br></pre></td></tr></table></figure></p>
+<p>前面的warning都可以不必理会，最后看见一下提示就OK：</p>
+<blockquote>
+<p>You’ve successfully authenticated, but Github does not provide shell access.</p>
+</blockquote>
+<p><img src="https://i.imgur.com/BSd2XT6.png" alt=""><br>现在打开 Github 的 Deploy keys 发现原来灰灰的钥匙变成了绿色啦！<br><img src="https://i.imgur.com/POWt03V.png" alt=""><br>至此，将SSH key部署到Github成功~</p>
+<hr>
+<h2 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2><p><strong>安装前Hexo可以阅读：</strong></p>
+<blockquote>
+<p>Hexo官方：<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">文档 | Hexo</a><br>自己发现的一些Tips：<a href="https://segmentfault.com/a/1190000003710962" target="_blank" rel="noopener"> hexo博客搭建时遇到的一些问题</a></p>
+</blockquote>
+<p>安装过程要是出现WARN好像都不要紧的，出现ERR!才是报错~<br>命令运行后出现所安装插件的版本号，代表安装成功！<br><strong>1.使用 npm 安装 Hexo</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install -g hexo-cli</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/azlcTp9.png" alt=""><br><strong>2.初始化 blog 文件夹</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo init blog</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/jyipIsn.png" alt=""><br><strong>3.切换到该blog路径</strong><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> blog</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/RpxZOFt.png" alt=""><br><strong>4.选做：</strong><br>用淘宝镜像cnpm运行速度会比npm快，只要如下安装好了之后，之后的命令语句中将npm统一写成cnpm就好；有一个命令cnpm是做不到的，还是得用npm，但是我忘记了orz，想用cnpm的朋友们可以百度一下；以下安装我依旧采用npm ~</p>
+<ul>
+<li>使用cnpm：</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install cnpm -g --registry=http://registry.npm.taobao.org</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> cnpm install</span></span><br></pre></td></tr></table></figure>
+<p>**5.安装 npm：<br>npm是Hexo的一个扩展插件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>对了，这两一小部分的截图有错，后来改了之后忘记了重新截 orz ；Git bash 的路径不应该在Desktop，应该直接cd到blog就好；直接在blog应该不会报错~</strong><br>那么，像我这么粗心，就导致了在桌面新建了一个blog文件夹来安装npm，接下来一步一步报错… 怎么办 QAQ<br>（以下是万一在安装过程出现类似报错的解决办法）<br><img src="https://i.imgur.com/QQsnyte.png" alt=""><br><strong>解决办法：</strong><br><br>（应该是项目目录下没有package.json这个文件，用npm init -f命令生成）<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm init -f</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/Ylytker.png" alt=""><br>重新再安装一遍就OK：<br><img src="https://i.imgur.com/ZxrxHwl.png" alt=""><br>现在我们来检验一下，Hexo和npm都已安装好：<br>没错，又是查询版本号 QAQ<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo -v</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm -v</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="https://i.imgur.com/qtd5lei.png" alt=""></p>
+<hr>
+<h3 id="第一部分，Hexo和Github的初始搭建均已完成！"><a href="#第一部分，Hexo和Github的初始搭建均已完成！" class="headerlink" title="第一部分，Hexo和Github的初始搭建均已完成！"></a><strong>第一部分，Hexo和Github的初始搭建均已完成！</strong></h3><h3 id="第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上"><a href="#第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上" class="headerlink" title="第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上~"></a><strong>第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上~</strong></h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>24小时持续要饭中 QAQ <br/></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat-reward-image.jpg" alt="柳蕊 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay-reward-image.jpg" alt="柳蕊 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/BLOG教程/" rel="tag"># BLOG教程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMjI4NS84ODQ5"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar-01.png"
+                alt="柳蕊" />
+            
+              <p class="site-author-name" itemprop="name">柳蕊</p>
+              <p class="site-description motion-element" itemprop="description">上海交通大学ACEM/大二/泉州五中/胡思乱想的生活日常/嘻嘻</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Echoleee" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:liurui98700@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://instagram.com/echoleee_/" target="_blank" title="Instagram">
+                    
+                      <i class="fa fa-fw fa-instagram"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://m.weibo.cn/u/2560537340/?jumpfrom=weibocom&from=singlemessage" target="_blank" title="Weibo">
+                    
+                      <i class="fa fa-fw fa-weibo"></i></a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Node"><span class="nav-number">1.</span> <span class="nav-text">安装 Node</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Git"><span class="nav-number">2.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册-Github账号"><span class="nav-number">3.</span> <span class="nav-text">注册 Github账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Github账号"><span class="nav-number">4.</span> <span class="nav-text">配置 Github账号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立-gh-page-分支"><span class="nav-number">5.</span> <span class="nav-text">建立 gh-page 分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-SSH-Key"><span class="nav-number">6.</span> <span class="nav-text">配置 SSH Key</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置过程"><span class="nav-number">6.0.1.</span> <span class="nav-text">配置过程</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">7.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#第一部分，Hexo和Github的初始搭建均已完成！"><span class="nav-number">7.1.</span> <span class="nav-text">第一部分，Hexo和Github的初始搭建均已完成！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上"><span class="nav-number">7.2.</span> <span class="nav-text">第二部分我们来看看如何为博客自定义参数，并将Hexo生成的静态页面部署到Github上~</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">柳蕊</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
+
+
+
+  
+
+  
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>
