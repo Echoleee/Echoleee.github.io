@@ -115,7 +115,7 @@
 <meta property="og:image" content="https://i.imgur.com/B8KdbWe.png">
 <meta property="og:image" content="https://i.imgur.com/Da1EeGM.png">
 <meta property="og:image" content="https://i.imgur.com/okzrNd1.png">
-<meta property="og:updated_time" content="2017-12-13T12:21:53.437Z">
+<meta property="og:updated_time" content="2017-12-13T12:33:55.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Github+Hexo搭建博客（二）">
 <meta name="twitter:description" content="搭建这个博客，我用到了Github、Hexo、notepad++和MarkdownPad. 利用notepad++查看和修改各式文本文件，利用MarkdownPad进行博客的编写，通过Hexo这个框架解析生成静态页面，然后部署到托管代码的Github上供大家浏览。第二部分：博客自定义参数，并将Hexo生成的静态页面部署到Github上">
@@ -444,47 +444,55 @@
 <p>我的系统 windows10；<br>所有用户名统一是Echoleee；<br>接下来我们一步一步一步一步来 orz</p>
 <h2 id="安装可能需要的插件"><a href="#安装可能需要的插件" class="headerlink" title="安装可能需要的插件"></a>安装可能需要的插件</h2><p>安装前记得：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> blog</span></span><br></pre></td></tr></table></figure></p>
 <p>以下是可能用得到的插件：</p>
-<ol>
-<li><p>便于部署到Github上的插件<br></p>
+<ul>
+<li>便于部署到Github上的插件</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-deployer-git --save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装 atom 生成插件（便于感兴趣的小伙伴订阅）<br></p>
+<ul>
+<li>安装 atom 生成插件（便于感兴趣的小伙伴订阅）</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-feed --save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装博客索引生成插件<br></p>
+<ul>
+<li>安装博客索引生成插件</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">index</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装归档生成插件<br></p>
+<ul>
+<li>安装归档生成插件</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">archive</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装标签生成插件（tag）<br></p>
+<ul>
+<li>安装标签生成插件（tag）</li>
+</ul>
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-<span class="keyword">tag</span> <span class="title">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装分类生成插件（category）<br></p>
+<ul>
+<li>安装分类生成插件（category）</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">category</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装Sitemap文件生成插件（便于搜索引擎抓取网页）<br></p>
+<ul>
+<li>安装Sitemap文件生成插件（便于搜索引擎抓取网页）</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-generator-sitemap --save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装百度Sitemap文件生成插件（普通的Sitemap格式不符合百度的要求）<br></p>
+<ul>
+<li>安装百度Sitemap文件生成插件（普通的Sitemap格式不符合百度的要求）</li>
+</ul>
 <figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install </span>hexo-generator-<span class="keyword">baidu-sitemap </span>--save</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装本地搜索功能插件<br></p>
+<ul>
+<li>安装本地搜索功能插件</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-generator-<span class="keyword">search</span> –<span class="keyword">save</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p>（因为后来的本地搜索换成了algoliasearch，所以这个又移除这个插件）</p>
-<ol>
-<li><p>渲染器<br></p>
+<ul>
+<li>渲染器</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-renderer-marked --save</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-renderer-stylus –save</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> npm install hexo-renderer-jade --save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装可视化博客编辑插件<br></p>
+<ul>
+<li>安装可视化博客编辑插件</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-<span class="keyword">admin</span> –<span class="keyword">save</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装本地预览插件<br></p>
+<ul>
+<li>安装本地预览插件</li>
+</ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="keyword">install</span> hexo-<span class="keyword">server</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
 <p>照着上面的清单安装就OK，如果之后用到特定的插件再补充就好；<br>如果想看每个插件安装的代码，我就顺带截图 po 出来 QAQ<br><img src="https://i.imgur.com/smWdATY.png" alt=""><br><img src="https://i.imgur.com/4iycksH.png" alt=""><br><img src="https://i.imgur.com/Ho0yHEa.png" alt=""><br><img src="https://i.imgur.com/3v1h1ii.png" alt=""></p>
 <hr>
 <p><strong>备注：</strong><br>很多时候，我们记不清使用 npm 安装过的某个插件的版本了，这时候该怎么办呢？</p>
@@ -493,23 +501,23 @@
 </blockquote>
 <hr>
 <h2 id="迫不及待地看看博客的本地预览"><a href="#迫不及待地看看博客的本地预览" class="headerlink" title="迫不及待地看看博客的本地预览"></a>迫不及待地看看博客的本地预览</h2><ol>
-<li>生成静态页面<br><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>生成静态页面</li>
 </ol>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/X8qvfRr.png" alt=""></p>
 <ol>
-<li>开启预览访问端口<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo server</span></span><br></pre></td></tr></table></figure>
-</li>
+<li>开启预览访问端口</li>
 </ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo server</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://i.imgur.com/8dn6cYt.png" alt=""><br>打开图示：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a><br>呐，这是在本地预览的Hexo初始博客~<br><img src="https://i.imgur.com/NPrNZJe.png" alt=""></p>
 <hr>
 <h2 id="个性化设置博客参数"><a href="#个性化设置博客参数" class="headerlink" title="个性化设置博客参数"></a>个性化设置博客参数</h2><p><strong>在_config.yml上修改参数</strong><br>（推荐使用方法二）</p>
 <ul>
-<li>方法一：</li>
+<li><strong>方法一：</strong></li>
 </ul>
 <p>打开Git Bash，运行之后直接修改参数！<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> vim _config.yml</span></span><br></pre></td></tr></table></figure></p>
 <ul>
-<li>方法二：</li>
+<li><strong>方法二：</strong></li>
 </ul>
 <p>下载notepad++来修改_config.yml文件</p>
 <blockquote>
@@ -523,21 +531,23 @@
 <blockquote>
 <p><a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置 | Hexo</a><br><a href="http://blog.csdn.net/xuezhisdc/article/details/53130383" target="_blank" rel="noopener">hexo教程系列——hexo配置教程</a></p>
 </blockquote>
-<p>然后就一起也PO一下我修改的截图吧！<br>（Echoleee是我Github的用户名噢）<br><strong>emmm如果之前没有选SSH Key，url记得应该是改成：<a href="http://github.com/Echoleee/Echoleee.github.io.git" target="_blank" rel="noopener">http://github.com/Echoleee/Echoleee.github.io.git</a></strong><br><img src="https://i.imgur.com/V1hgbsb.png" alt=""><br><img src="https://i.imgur.com/CAyRsvN.png" alt=""><br><img src="https://i.imgur.com/7ZP7gEF.png" alt=""><br>到现在博客初始主题和基础部分都准备好啦！</p>
+<p>然后就一起也PO一下我修改的截图吧！<br>（Echoleee是我Github的用户名噢）<br><strong>emmm如果之前没有选SSH Key，url记得应该是要改成：<br><a href="http://github.com/Echoleee/Echoleee.github.io.git" target="_blank" rel="noopener">http://github.com/Echoleee/Echoleee.github.io.git</a></strong><br><img src="https://i.imgur.com/V1hgbsb.png" alt=""><br><img src="https://i.imgur.com/CAyRsvN.png" alt=""><br><img src="https://i.imgur.com/7ZP7gEF.png" alt=""><br>到现在博客初始主题和基础部分都准备好啦！</p>
 <hr>
 <h2 id="发布一篇测试文章"><a href="#发布一篇测试文章" class="headerlink" title="发布一篇测试文章"></a>发布一篇测试文章</h2><p>打开Git Bash；<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> blog</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo new <span class="string">'文章名称'</span></span></span><br></pre></td></tr></table></figure></p>
-<p><img src="https://i.imgur.com/g8gJsvx.png" alt=""><br>按照上面的路径用notepad++打开md文件：<br>可以在上下的两个’—‘中间添加诸如tags、categories等等等等的信息；<br>第二个’—‘之后就是正文，支持markdown语句；<br><img src="https://i.imgur.com/B6CZWiy.png" alt=""><br>修改后保存~<br>可以依照步骤二打开本地预览窗口查看你的测试文章：<br><img src="https://i.imgur.com/B8KdbWe.png" alt=""></p>
+<p><img src="https://i.imgur.com/g8gJsvx.png" alt=""><br>按照上面的路径用notepad++打开md文件；<br>可以在上下的两个’- - -‘中间添加诸如tags、categories等等等等的信息；<br>第二个’- - -‘之后就是正文，支持markdown语句；<br><img src="https://i.imgur.com/B6CZWiy.png" alt=""><br>修改后保存~<br>可以依照步骤二打开本地预览窗口查看你的测试文章：<br><img src="https://i.imgur.com/B8KdbWe.png" alt=""></p>
 <hr>
 <h2 id="部署到Github上"><a href="#部署到Github上" class="headerlink" title="部署到Github上"></a>部署到Github上</h2><p>现在你的本地预览窗口里面已经有个性化的设置和第一篇测试文章啦！<br>现在我们将其部署至Github上供每一个打开链接的网友浏览。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> blog</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo generate</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo deploy</span></span><br></pre></td></tr></table></figure></p>
-<p>最后一步结束部署完成：</p>
+<p>最后一步结束部署完成显示：</p>
 <blockquote>
 <p>INFO Deploy done: git</p>
 </blockquote>
 <p><img src="https://i.imgur.com/Da1EeGM.png" alt=""></p>
-<p>然后现在打开<a href="http://Echoleee.github.io，显示的就是本地预览页面的样子啦~" target="_blank" rel="noopener">http://Echoleee.github.io，显示的就是本地预览页面的样子啦~</a><br>开心！<br><img src="https://i.imgur.com/okzrNd1.png" alt=""></p>
+<p>然后现在打开 <a href="http://Echoleee.github.io，" target="_blank" rel="noopener">http://Echoleee.github.io，</a> 显示的就是本地预览页面的样子啦~<br>开心！<br><img src="https://i.imgur.com/okzrNd1.png" alt=""></p>
 <hr>
-<p><strong>关于一些命令的简写：</strong><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+<p><strong>关于一些命令的写法tips：</strong><br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
 <p>可以分别简写成：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo c</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d</span></span><br></pre></td></tr></table></figure></p>
+<p>生成静态页面和部署可以合起来写作：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo d -g</span></span><br></pre></td></tr></table></figure></p>
+<p>可以顺带debug，如：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> hexo s -debug</span></span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><strong>第二部分，博客自定义参数，并将Hexo生成的静态页面部署到Github上均已完成！</strong><br><strong>第三部分我们来看看关于博客主题的配置和MarkdownPad2的一些Tips~</strong></p>
 
