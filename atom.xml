@@ -43,9 +43,24 @@
     <link href="git@github.com:Echoleee/Echoleee.github.io.git/2017/12/14/%E5%86%99%E7%BB%992017%E5%B9%B4%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
     <id>git@github.com:Echoleee/Echoleee.github.io.git/2017/12/14/写给2017年的自己/</id>
     <published>2017-12-13T16:50:09.000Z</published>
-    <updated>2017-12-17T09:17:41.295Z</updated>
+    <updated>2017-12-17T09:26:21.921Z</updated>
+    
+    <content type="html"><![CDATA[<script>    if("233"==prompt("Please input password"))    {        alert("Right");    }    else    {        alert("Wrong");        location="https://echoleee.github.io/";    }</script>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;script&gt;
+    if(&quot;233&quot;==prompt(&quot;Please input password&quot;))
+    {
+        alert(&quot;Right&quot;);
+    }
+    else
+    {
+        alert(&quot;Wrong&quot;);
+        l
+      
     
     </summary>
     

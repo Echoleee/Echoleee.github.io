@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[写给2017年的自己]]></title>
     <url>%2F2017%2F12%2F14%2F%E5%86%99%E7%BB%992017%E5%B9%B4%E7%9A%84%E8%87%AA%E5%B7%B1%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[if("233"==prompt("Please input password")) { alert("Right"); } else { alert("Wrong"); location="https://echoleee.github.io/"; }]]></content>
       <categories>
         <category>年度总结</category>
       </categories>
